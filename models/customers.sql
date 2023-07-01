@@ -15,5 +15,4 @@ with markup as (
     
     select * from {{source('sources','customers')}} where customer_id in (select result from removed)
 )
-
 select * from final

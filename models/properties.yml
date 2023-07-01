@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: new_shippers
+    description: "Included new column email of shipper."
+    docs: 
+      show: true
+    latest_version: 1
+    columns:
+      - name: shipper_id
+        description: "unique id of table"
+        quote: false
+        tags: ['id']
+        tests:
+          - unique
+        meta:
+          type: integer
+
+      - name: company_name
+        description: "company name"
+        quote: false
+        tags: ['company']
+        meta:
+          type: string
+
+      - name: phone
+        description: "telephone"
+        quote: false
+        tags: ['contact']
+        meta:
+          type: string
+
+      - name: shipper_email
+        description: "email of shipper"
+        quote: false
+        tags: ['contact']
+        meta:
+          type: string
+    versions:
+      - v: 1
+        description: 'initial version'
+        docs:
+          show: false
